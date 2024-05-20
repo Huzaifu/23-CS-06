@@ -11,7 +11,7 @@ pipeline{
 
         stage(Run the index file on the webserver){
             steps{
-               sh cp index.html /var/www/html
+               sh cp index.html /var/www/html/
             }
         }
     }
