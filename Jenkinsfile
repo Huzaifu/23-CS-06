@@ -17,7 +17,10 @@ pipeline {
 
         stage('Deploy index file to webserver') {
             steps {
-                sh 'cp index.html /var/www/html'
+                sh '''
+                cp index.html /var/www/html
+                systemctl reload nginx
+                '''
             }
         }
     }
